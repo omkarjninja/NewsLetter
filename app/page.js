@@ -1,11 +1,13 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { db, collection, addDoc } from '../lib/firebase';
 export default function Home() {
-
+ 
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -26,6 +28,7 @@ export default function Home() {
 
     setLoading(false);
   };
+},[email]);
   return (
     // “Stay Ahead in Tech: Exclusive Web Dev Tips and Game-Changing Resources Delivered Right to Your Inbox!”
     <div>
