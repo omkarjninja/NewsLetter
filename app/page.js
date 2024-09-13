@@ -7,28 +7,30 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
     setError('');
 
-    try {
-      const docRef = await addDoc(collection(db, 'subscribers'), {
-        email: email,
-        timestamp: new Date(),
-      });
-      console.log('Document written with ID: ', docRef.id);
-      setEmail('');
-    } catch (e) {
-      console.error('Error adding document: ', e);
-      setError('Failed to subscribe. Please try again.');
-    }
+    
+      try {
+        const docRef = await addDoc(collection(db, 'subscribers'), {
+          email: email,
+          timestamp: new Date(),
+        });
+        console.log('Document written with ID: ', docRef.id);
+        setEmail('');
+      } catch (e) {
+        console.error('Error adding document: ', e);
+        setError('Failed to subscribe. Please try again.');
+      }
+    
+    
 
     setLoading(false);
   };
-},[email]);
+
   return (
     // “Stay Ahead in Tech: Exclusive Web Dev Tips and Game-Changing Resources Delivered Right to Your Inbox!”
     <div>
@@ -65,41 +67,7 @@ export default function Home() {
             <small className="mb-5">
               Join for Free!
             </small>
-            {/* <div className="flex">
-              <div className="flex gap-5 items-center mx-auto">
-                <strong className="text-right">
-                  Join the #1 community<br />
-                  becoming millionaire!
-                </strong>
-                <div className="flex">
-                  <img
-                    src="/imgs/LB_arrondi.png"
-                    className="w-12 border-2 rounded-full relative z-50"
-                    alt=""
-                  />
-                  <img
-                    src="/imgs/avatar-01.jpg"
-                    className="w-12 border-2 rounded-full relative z-40 -ml-6"
-                    alt=""
-                  />
-                  <img
-                    src="/imgs/avatar-02.jpg"
-                    className="w-12 border-2 rounded-full relative z-30 -ml-6"
-                    alt=""
-                  />
-                  <img
-                    src="/imgs/avatar-07.jpg"
-                    className="w-12 border-2 rounded-full relative z-20 -ml-6"
-                    alt=""
-                  />
-                  <img
-                    src="/imgs/avatar-10.jpg"
-                    className="w-12 border-2 rounded-full relative z-10 -ml-6"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div> */}
+            
           </div>
         </div>
       </div>
