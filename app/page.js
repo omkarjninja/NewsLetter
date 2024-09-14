@@ -89,7 +89,7 @@ export default function Home() {
             <p className="mb-4 text-base font-normal text-gray-100">
             “Want to land your dream job straight out of college? This one resume hack could make all the difference in 2024!”
             </p>
-            <a href="#" className="btn btn-light btn-sm ">Continue Reading</a>
+            <a href="#" className="btn btn-light btn-sm ">Coming Soon...</a>
           </div>
           <div>
             <p className="pt-12 mb-3 text-sm font-normal text-gray-300">September , 2024</p>
@@ -101,7 +101,7 @@ export default function Home() {
             <p className="mb-4 text-base font-normal text-gray-100">
              Easy and simple steps to implement dark mode in your web application and android application.
             </p>
-            <a href="#" className="btn btn-light btn-sm ">Continue Reading</a>
+            <a href="#" className="btn btn-light btn-sm ">Coming Soon...</a>
           </div>
           <div>
           </div>
