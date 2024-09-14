@@ -20,6 +20,7 @@ export default function Home() {
           timestamp: new Date(),
         });
         console.log('Document written with ID: ', docRef.id);
+        alert('Subscribed successfully!');
         setEmail('');
       } catch (e) {
         console.error('Error adding document: ', e);
